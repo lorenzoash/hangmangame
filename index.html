@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jumpman</title>
+    <link rel="stylesheet" href="main.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <h1>Jumpman Jumpman</h1>
+
+    <button id="reset-btn" class="bttn-gradient bttn-md bttn-primary">Reset Game</button>
+    <p>
+        Instruction on how to play the game </br> Guess letters to uncover the hidden</br> 
+        the word or phrase. Be careful, </br>a new body part appears on </br>your jumpman with 
+        every wrong guess. </br>You must guess all the letters </br>before Michael 
+        Jordan's body parts appear
+    </p>
+    <div id="win-popup">
+        <div class="container">
+            <h2>You're the G.O.A.T</h2>
+        </div>
+    </div>
+    <div id="lose-popup">
+        <div class="container2">
+            <h1>YOU GOT DUNKED ON SON!!</h1>
+        </div>
+    </div>
+    <div id="showShots"></div>
+    <div id="guess"></div>
+    <table id="letters">
+        <tr>
+            <td id="A" class="letter">A</td>
+            <td id="B" class="letter">B</td>
+            <td id="C" class="letter">C</td>
+            <td id="D" class="letter">D</td>
+            <td id="E" class="letter">E</td>
+        </tr>
+        <tr>
+            <td id="F" class="letter">F</td>
+            <td id="G" class="letter">G</td>
+            <td id="H" class="letter">H</td>
+            <td id="I" class="letter">I</td>
+            <td id="J" class="letter">J</td>
+        </tr>
+        <tr>
+            <td id="K" class="letter">K</td>
+            <td id="L" class="letter">L</td>
+            <td id="M" class="letter">M</td>
+            <td id="N" class="letter">N</td>
+            <td id="O" class="letter">O</td>
+        </tr>
+        <tr>
+            <td id="P" class="letter">P</td>
+            <td id="Q" class="letter">Q</td>
+            <td id="R" class="letter">R</td>
+            <td id="S" class="letter">S</td>
+            <td id="T" class="letter">T</td>
+            
+        </tr>
+        <tr>
+            <td id="U" class="letter">U</td>
+            <td id="V" class="letter">V</td>
+            <td id="W" class="letter">W</td>
+            <td id="X" class="letter">X</td>
+            <td id="Y" class="letter">Y</td>
+        </tr>
+        <tr>
+            <td class="letter">Z</td>
+            <td colspan="4"></td>
+        </tr>
+    </table>
+    <div id='img1'></div>
+    <div id='img2'></div>
+    <div id='img3'></div>
+    <div id='img4'></div>
+    <div id='img5'></div>
+    <div id='img6'></div>
+    <div id="jumpman"></div>
+    <audio  src="http://dopefile.pk:182/d/d4wfu4u3rrichaw67hljxb3updkbfpwqtb2fmo5fh722pnqbbkfwhopzz4flyf4ffotnuem7/9.%20Drake%20-%20Jumpman.mp3" autoplay></audio>
+    <div class="ball">
+            <div class="stroke pos1"></div>
+            <div class="stroke pos2"></div>
+            <div class="stroke2 pos3"></div>
+            <div class="stroke2 pos4"></div>
+        </div>
+</body>
+</html>

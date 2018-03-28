@@ -1,0 +1,325 @@
+body {
+    background-size: cover;
+    /* background-image: url('https://cdn-s3.si.com/s3fs-public/images/1991-Michael-Jordan-005010523final.jpg'); */
+    background-image: url('https://hugopeepbox.files.wordpress.com/2014/01/harlem-2577.jpg');
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+#showShots {
+    font-size: 35px;
+    font-family: "Impact";
+    color: white;
+    -webkit-text-stroke: 2px red;
+    text-shadow:
+       3px 3px 0 red,
+     -1px -1px 0 red,  
+      1px -1px 0 red,
+      -1px 1px 0 red,
+       1px 1px 0 red;
+}
+
+
+h1 {
+    text-align: center;
+    color: darkred;
+    font-family: 'Washington Basketball';
+    font-size: 80px;
+    letter-spacing: 5px;
+}
+
+table{
+  border: 3px solid grey;
+  padding: 10px;
+  background-color: black;
+}
+
+td {
+    font-family: 'Score Board St';
+    font-size: 20px;
+    border: 1px solid orangered;
+    padding: 15px;
+    height: 10px;
+    width: 10px;
+    text-align: center;
+    color:white;
+    background-color: grey;
+       
+}
+#guess {
+    font-family: "caput_trial";
+    text-align: center;
+    line-break: normal;
+    color: yellow;
+    font-size: 60px;
+    padding-right: 10px;
+    position: absolute;
+    height: 100px;  
+    width: 100px;
+    letter-spacing: 10px;
+    right: 800px;
+    top: 430px;
+    
+}
+.letter:hover{
+    color: lightcoral;
+}
+
+.bttn-gradient.bttn-primary {
+    background-image: (linear, left top, left bottom, color-stop(0, #00bbd4), color-stop(1, #3f51b5));
+    background-image: -webkit-linear-gradient(top, #00bbd4 0%, #3f51b5 100%);
+    background-image: linear-gradient(to bottom, #00bbd4 0%, #3f51b5 100%);
+    background-image: -webkit-linear-gradient(93deg, #3f51b5 0%, #00bbd4 100%);
+    color: #fff;
+    font-size: 20px;
+    border-radius: 6px;
+    position: absolute;
+    right: 680px;
+    top: 160px;
+  }
+
+  #jumpman {
+    height: 340px;
+    width: 340px;
+    padding: 30px;
+    position: absolute;
+    right: 25px;
+    top: 200px;
+    background-image: url('https://i.imgur.com/jBEHgsh.jpg');
+    background-size: cover;
+    border-color: orangered;
+    border-style: double;
+    
+  }
+
+  .letter{
+    top: 200px;
+  }
+
+p {
+    position: absolute;
+    right: 60px;
+    top: 50px;
+}
+
+#img1 {
+    position: relative; 
+     bottom: 493px;
+    left: 1068px;
+    height: 400px;
+    width: 400px;
+    background-size: contain;
+    z-index: 102;  
+}
+#img2 {
+    position: relative; 
+     bottom:893px;
+    left: 1071px;
+    height: 400px;
+    width: 400px;
+    background-size: contain;
+    z-index: 102;  
+}
+#img3 {
+    position: relative; 
+     bottom:1240px;
+    left: 1100px;
+    height: 400px;
+    width: 400px;
+    background-size: contain;
+    z-index: 102;  
+}
+
+#img4 {
+    position: relative; 
+    bottom: 1600px;
+    left: 1074px;
+    height: 400px;
+    width: 400px;
+    background-size: contain;
+    z-index: 102;  
+}
+#img5 {
+    position: relative; 
+    bottom: 1990px;
+    left: 1066px;
+    height: 400px;
+    width: 400px;
+    background-size: contain;
+    z-index: 102;  
+}
+#img6 {
+    position: relative; 
+    bottom: 2511.3px;
+    left: 1049px;
+    height: 400px;
+    width: 400px;
+    background-size: contain;
+    z-index: 102;  
+}
+audio {
+    bottom: 2900px;
+    position: relative;
+}
+
+#win-popup h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+
+#win-popup{
+    position: relative;
+    top: 200px;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+#win-popup .container {
+    background-color: black;
+    opacity: .8;
+    padding: 30px;
+    position: absolute;
+    top: -700px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.popup {
+    top: -400px;
+    animation: drop 0.5s ease forwards;
+}
+@keyframes drop {
+     0%{}
+     70%{ transform: translateY(700px)}
+     100%{ transform: translateY(650px)}
+}
+
+#lose-popup h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+
+#lose-popup{
+    position: relative;
+    top: 200px;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+#lose-popup .container2 {
+    background-color: black;
+    opacity: .8;
+    padding: 30px;
+    position: absolute;
+    top: -700px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.popup1 {
+    top: -400px;
+    animation: drop 0.5s ease forwards;
+}
+@keyframes drop {
+     0%{}
+     70%{ transform: translateY(700px)}
+     100%{ transform: translateY(650px)}
+}
+
+/* HTML  CSS  JS  Result
+Edit on  */
+/* Animation properties */
+h1 {
+  animation: jumpman 10s ease-out infinite;
+}
+/* .wars {
+  animation: wars 10s ease-out infinite;
+}
+.byline span {
+  animation: spin-letters 10s linear infinite;
+}
+.byline {
+  animation: move-byline 10s linear infinite;
+}
+
+/* Keyframes */
+@keyframes jumpman {
+  0% {
+    opacity: 0;
+    transform: scale(1.5) translateY(-0.75em);
+  }
+  20% {
+    opacity: 1;
+  }
+  89% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em);
+  }
+}
+
+.ball{
+position:absolute;
+left:300px;
+top: 610px;
+width:60px;
+height:60px;
+background:#f57c33;
+border-radius:50px;
+overflow:hidden;
+
+border: 2px solid black;
+border: 2px solid black;
+animation-name:bounce;
+animation-duration:0.7s;
+animation-iteration-count: infinite;
+animation-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000); 
+/* cubic-bezier(0.860, 0.000, 0.070, 1.000);  */
+}
+.stroke{
+position:absolute;
+
+width:90px;
+height:90px;
+border-radius:45px;
+border: 2px solid black;
+
+}
+.stroke2{
+    position:absolute;
+   border: 2px solid black;
+width:100px;
+height:100px;
+border-radius:300px;
+
+}
+
+.pos1{
+ right:60px;
+bottom:-25px;
+
+}
+.pos2{
+ left:60px;
+bottom:-25px;
+
+}
+.pos3{
+top:-100px;
+left:48px
+
+}
+.pos4{
+top:48px;
+left:-100px;
+}
+@keyframes bounce {
+    0%   {}
+    10% {transform:scaleX(1);transform:scaleY(0.7);}
+    50% {top:300px; transform:scaleX(1.7);transform:scaleY(1); }
+     100% {top:610px;}
+}
