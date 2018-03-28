@@ -122,7 +122,7 @@ p {
 }
 #img3 {
     position: relative; 
-     bottom:1240px;
+    bottom:1240px;
     left: 1100px;
     height: 400px;
     width: 400px;
@@ -290,11 +290,11 @@ border: 2px solid black;
 
 }
 .stroke2{
-    position:absolute;
-   border: 2px solid black;
+position:absolute;
+border: 2px solid black;
 width:100px;
 height:100px;
-border-radius:300px;
+border-radius:3 0   0px;
 
 }
 
