@@ -49,7 +49,7 @@ td {
        
 }
 #guess {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'viridian college';
     text-align: center;
     line-break: normal;
     color: yellow;
@@ -62,6 +62,13 @@ td {
     right: 800px;
     top: 430px;
     font-weight: bold;
+    -webkit-text-stroke: 0.5px orange;
+    text-shadow:
+       1px 1px 0 orange,
+     -1px -1px 0 orange,  
+      1px -1px 0 orange,
+      -1px 1px 0 orange,
+       1px 1px 0 orange;
 }
 .letter:hover{
     color: lightcoral;
@@ -98,7 +105,8 @@ td {
     top: 200px;
   }
 
-p {
+.instructions {
+    color: black;
     position: absolute;
     right: 60px;
     top: 50px;
@@ -355,7 +363,9 @@ left:-100px;
     left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
-  }
+    margin-top: -335px;
+    margin-left: -595px;
+}
   .player ul {
     list-style: none;
   }

@@ -12,7 +12,7 @@ var nba = [
     'ALL STAR', 'HALL OF FAME', 'BACKBOARD', 'BOUNCE PASS', 'FLASHY PASS', 'BASKETBALL', 'PLAYMAKER', 'DEFENDER', 'BLOCK SHOT', 'POSTERIZE',
     'TRIANGLE OFFENSE', 'MID RANGE', 'BALL HANDLING', 'POST OFFENSE', 'LATERAL QUICKNESS', 'STEALS', 'BLOCKS', 'POST HOOK', 'POST FADEAWAY',
     'CONTACT DUNK', 'OFF DRIBBLE', 'ROOKIE', 'SHOT CONTEST', 'NIKOLA VUCEVIC', 'DEVIN BOOKER', 'TRISTAN THOMPSON', 'ANDRE IGUODALA', 'JOEL EMBIID',
-    
+
 ];
 
 /*----- app's state (variables) -----*/
@@ -54,8 +54,8 @@ function handleClick(e) {
     word.split('').forEach(function(char, idx) {
         if (allGuesses.includes(char)) {
             guess = guess.split("");
-            guess.splice(idx, 1);
-            guess.splice(idx, 0, char);
+            // guess.splice(idx, 1);
+            guess.splice(idx, 1, char); // if character in the word is in one of your guesses, replace the underscore and insert the character
             guess = guess.join("");
         }
     })
@@ -116,3 +116,43 @@ function render() {
         winPopup.classList.add('popup');
     }
 }
+
+var music = document.getElementById("music");
+var playButton = document.getElementById("play");
+var pauseButton = document.getElementById("pause");
+var playhead = document.getElementById("elapsed");
+var timeline = document.getElementById("slider");
+var timer = document.getElementById("timer");
+var duration;
+pauseButton.style.visibility = "hidden";
+
+var timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
+music.addEventListener("timeupdate", timeUpdate, false);
+
+function timeUpdate() {
+	var playPercent = timelineWidth * (music.currentTime / duration);
+	playhead.style.width = playPercent + "px";
+
+	var secondsIn = Math.floor(((music.currentTime / duration) / 3.5) * 100);
+	if (secondsIn <= 9) {
+		timer.innerHTML = "0:0" + secondsIn;
+	} else {
+		timer.innerHTML = "0:" + secondsIn;
+	}
+}
+
+playButton.onclick = function() {
+	music.play();
+	playButton.style.visibility = "hidden";
+	pause.style.visibility = "visible";
+}
+
+pauseButton.onclick = function() {
+	music.pause();
+	playButton.style.visibility = "visible";
+	pause.style.visibility = "hidden";
+}
+
+music.addEventListener("canplaythrough", function () {
+	duration = music.duration;
+}, false);
