@@ -42,7 +42,7 @@ function handleClick(e) {
     if (!letter || allGuesses.includes(letter) || guess === word || !shots) return;
     allGuesses.push(letter);
     if (!word.includes(letter)) {
-        shot--;
+        shots--;
         badGuesses.push(letter);
     }
     guess = guess.split('').map((char, idx) => word.charAt(idx) === letter ? letter : char).join('');
