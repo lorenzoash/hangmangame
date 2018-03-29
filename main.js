@@ -39,42 +39,13 @@ initialize();
 
 function handleClick(e) {
     var letter = e.target.textContent;
-
-    if (shots === 0) {
-        return;
-    } else if (allGuesses.includes(letter)) {
-        return;
-    } else if (word.split("").includes(letter)) {
-        allGuesses.push(letter);
-    } else {
-        allGuesses.push(letter);
-        shots -= 1;
+    if (!letter || allGuesses.includes(letter) || guess === word || !shots) return;
+    allGuesses.push(letter);
+    if (!word.includes(letter)) {
+        shot--;
+        badGuesses.push(letter);
     }
-
-    word.split('').forEach(function(char, idx) {
-        if (allGuesses.includes(char)) {
-            guess = guess.split("");
-            guess.splice(idx, 1);
-            guess.splice(idx, 0, char);
-            guess = guess.join("");
-        }
-    })
-  
-
-    // if (shots === 0) return;
-    // if (!letter || allGuesses.includes(letter)) return;
-    // allGuesses.push(letter);
-    // var found = false;
-    // var wordArr = ;
-    // var guessArr = guess.split('');
-    // if (wordArr.includes(letter)) {
-    //     found = true;
-    // };
-    // if (!found) {
-    //     badGuesses.push(letter);
-    //     shots -= badGuesses.length;
-    // };
-    // guess = guessArr.join("");
+    guess = guess.split('').map((char, idx) => word.charAt(idx) === letter ? letter : char).join('');
     render();
 }
 
@@ -93,6 +64,7 @@ function initialize() {
     losePopup.classList.remove('popup1');
     guess = guessArr.join("");
     allGuesses = [];
+    badGuesses = [];
     render();
 }
 
@@ -101,6 +73,7 @@ function render() {
     document.getElementById('showShots').innerHTML = `You have ${shots} Shots`;
     letterEls.forEach(function (td) {
         td.style.opacity = allGuesses.includes(td.textContent) ? 0.5 : 1;
+        td.style.color = badGuesses.includes(td.textContent) ? 'red' : 'white';
     });
 
     for (var i = 1; i < 7; i++) {
