@@ -9,7 +9,10 @@ var nba = [
     'LEBRON JAMES', 'MICHAEL JORDAN', 'KOBE BRYANT', 'KYRIE IRVING', 'LAVAR BALL', 'LONZO BALL', 'BRANDON INGRAM', 'KYLE KUZMA',
     'JULIUS RANDLE', 'KAREEM ABDULJABBAR', 'SHAQUILLE ONEAL', 'TIM DUNCAN', 'MAGIC JOHNSON', 'BILL RUSSELL', 'WILT CHAMBERLAIN',
     'LARRY BIRD', 'HAKEEM OLAJUWON', 'OSCAR ROBERTSON', 'JULIUS ERVING', 'JUMP SHOT', 'CROSS OVER', 'SLAM DUNK', 'DRIBBLING', 'LAYUP',
-    'ALL STAR', 'HALL OF FAME', 'BACKBOARD', 'BOUNCE PASS'
+    'ALL STAR', 'HALL OF FAME', 'BACKBOARD', 'BOUNCE PASS', 'FLASHY PASS', 'BASKETBALL', 'PLAYMAKER', 'DEFENDER', 'BLOCK SHOT', 'POSTERIZE',
+    'TRIANGLE OFFENSE', 'MID RANGE', 'BALL HANDLING', 'POST OFFENSE', 'LATERAL QUICKNESS', 'STEALS', 'BLOCKS', 'POST HOOK', 'POST FADEAWAY',
+    'CONTACT DUNK', 'OFF DRIBBLE', 'ROOKIE', 'SHOT CONTEST', 'NIKOLA VUCEVIC', 'DEVIN BOOKER', 'TRISTAN THOMPSON', 'ANDRE IGUODALA', 'JOEL EMBIID',
+    
 ];
 
 /*----- app's state (variables) -----*/
@@ -104,12 +107,12 @@ function render() {
         var div = document.getElementById('img' + i);
         div.style.backgroundImage = i >= shots+1 ? `url(images/img${i}.png)` : '';
     }
-       
+
     if (shots === 0) {
-        losePopup.classList.add('popup');
+        losePopup.classList.add('popup1');
     } 
     
     if (guess === word) {
-        winPopup.classList.add('popup1');
+        winPopup.classList.add('popup');
     }
 }

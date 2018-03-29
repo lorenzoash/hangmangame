@@ -1,9 +1,11 @@
-body {
+html, body {
     background-size: cover;
     /* background-image: url('https://cdn-s3.si.com/s3fs-public/images/1991-Michael-Jordan-005010523final.jpg'); */
     background-image: url('https://hugopeepbox.files.wordpress.com/2014/01/harlem-2577.jpg');
     background-attachment: fixed;
     height: 100vh;
+    margin: 0; 
+   overflow: hidden;
 }
 
 #showShots {
@@ -47,11 +49,11 @@ td {
        
 }
 #guess {
-    font-family: "caput_trial";
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     line-break: normal;
     color: yellow;
-    font-size: 60px;
+    font-size: 40px;
     padding-right: 10px;
     position: absolute;
     height: 100px;  
@@ -59,7 +61,7 @@ td {
     letter-spacing: 10px;
     right: 800px;
     top: 430px;
-    
+    font-weight: bold;
 }
 .letter:hover{
     color: lightcoral;
@@ -104,8 +106,8 @@ p {
 
 #img1 {
     position: relative; 
-     bottom: 493px;
-    left: 1068px;
+    bottom: 512px;
+    left: 1049px;
     height: 400px;
     width: 400px;
     background-size: contain;
@@ -113,8 +115,8 @@ p {
 }
 #img2 {
     position: relative; 
-     bottom:893px;
-    left: 1071px;
+    bottom: 792px;
+    left: 1066px;
     height: 400px;
     width: 400px;
     background-size: contain;
@@ -122,8 +124,8 @@ p {
 }
 #img3 {
     position: relative; 
-    bottom:1240px;
-    left: 1100px;
+    bottom: 1202px;
+    left: 1074px;
     height: 400px;
     width: 400px;
     background-size: contain;
@@ -132,8 +134,8 @@ p {
 
 #img4 {
     position: relative; 
-    bottom: 1600px;
-    left: 1074px;
+    bottom: 1642px;
+    left: 1100px;
     height: 400px;
     width: 400px;
     background-size: contain;
@@ -141,8 +143,8 @@ p {
 }
 #img5 {
     position: relative; 
-    bottom: 1990px;
-    left: 1066px;
+    bottom: 2095px;
+    left: 1071px;
     height: 400px;
     width: 400px;
     background-size: contain;
@@ -150,8 +152,8 @@ p {
 }
 #img6 {
     position: relative; 
-    bottom: 2511.3px;
-    left: 1049px;
+    bottom: 2495.3px;
+    left: 1068px;
     height: 400px;
     width: 400px;
     background-size: contain;
@@ -278,7 +280,6 @@ animation-name:bounce;
 animation-duration:0.7s;
 animation-iteration-count: infinite;
 animation-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000); 
-/* cubic-bezier(0.860, 0.000, 0.070, 1.000);  */
 }
 .stroke{
 position:absolute;
@@ -323,3 +324,210 @@ left:-100px;
     50% {top:300px; transform:scaleX(1.7);transform:scaleY(1); }
      100% {top:610px;}
 }
+
+  h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 8pt;
+    font-weight: 400;
+    cursor: default;
+  }
+  
+  h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13pt;
+    font-weight: 300;
+    color: white;
+    cursor: default;
+  }
+  
+  .player {
+    height: 90px;
+    width: 230px;
+    background-color: black;
+    position: absolute;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+  }
+  .player ul {
+    list-style: none;
+  }
+  .player ul li {
+    display: inline-block;
+  }
+  
+  .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .cover img {
+    height: 90px;
+    width: 90px;
+    border-radius: 20px;
+  }
+  
+  .info h1 {
+    margin-top: 1px;
+    margin-left: 60px;
+    line-height: 0;
+    font-size: 10px;
+  }
+  .info h4 {
+    margin-left: 62px;
+    line-height: 13px;
+    color: #636367;
+    font-size: 10px;
+    margin-top: -4px;
+}
+  .info h2 {
+    margin-top: -4px;
+    margin-left: 74px;
+    line-height: -1px;
+    font-size: 10px;
+}
+  
+  .button-items {
+    margin-left: 180px;
+  }
+  
+  #slider {
+    width: 82px;
+    height: 4px;
+    background: #151518;
+    border-radius: 2px;
+    margin-left: -111px;
+    margin-top: -5px;
+}
+  #slider div {
+    width: 4px;
+    height: 4px;
+    margin-top: 1px;
+    background: #EF6DBC;
+    border-radius: 2px;
+  }
+  
+  #timer {
+    color: #494B4E;
+    line-height: 0;
+    font-size: 9pt;
+    float: right;
+    font-family: Arial, Sans-Serif;
+  }
+  
+ 
+  .controls svg:nth-child(2) {
+    margin-left: -120px;
+    margin-right: 15px;
+  }
+  
+  #play {
+    padding: 0 3px;
+    width: 20px;
+    height: 20px;
+    x: 0px;
+    y: 0px;
+    enable-background: new 0 0 25 25;
+    margin-left: -111px;
+    margin-top: 7px;
+}
+  #play g {
+    stroke: #FEFEFE;
+    stroke-width: 1;
+    stroke-miterlimit: 10;
+  }
+  #play g path {
+    fill: #FEFEFE;
+  }
+  
+  #play:hover {
+    cursor: pointer;
+  }
+  #play:hover g {
+    stroke: #8F4DA9;
+    cursor: pointer;
+  }
+  #play:hover g path {
+    fill: #9b59b6;
+    cursor: pointer;
+  }
+  
+  /* .step-backward {
+    width: 18px;
+    height: 18px;
+    x: 0px;
+    y: 0px;
+    enable-background: new 0 0 25 25;
+    margin-bottom: 5px;
+  }
+  .step-backward g polygon {
+    fill: #FEFEFE;
+  } */
+  
+  /* .step-foreward {
+    width: 18px;
+    height: 18px;
+    x: 0px;
+    y: 0px;
+    enable-background: new 0 0 25 25;
+    margin-bottom: 2px;
+  }
+  .step-foreward g polygon {
+    fill: #FEFEFE;
+  } */
+  
+  #pause {
+    x: 0px;
+    y: 0px;
+    enable-background: new 0 0 25 25;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-left: 27px;
+    cursor: pointer;
+    margin-top: 7px;
+}
+  #pause rect {
+    fill: white;
+  }
+  
+  #pause:hover rect {
+    fill: #8F4DA9;
+  }
+  
+  .step-backward g polygon:hover, .step-foreward g polygon:hover {
+    fill: #EF6DBC;
+    cursor: pointer;
+  }
+  
+  p {
+    color: #BDBDBD;
+  }
+  
+  #skip {
+    float: right;
+    margin-top: 10px;
+  }
+  #skip p {
+    color: #2980b9;
+  }
+  #skip p:hover {
+    color: #e74c3c;
+    cursor: pointer;
+  }
+  
+  .expend {
+    padding: 0.5px;
+    cursor: pointer;
+  }
+  .expend svg:hover g polygon {
+    fill: #EF6DBC;
+  }
+  
