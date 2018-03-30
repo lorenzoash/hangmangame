@@ -42,10 +42,12 @@ function handleClick(e) {
     if (!letter || allGuesses.includes(letter) || guess === word || !shots) return;
     allGuesses.push(letter);
     if (!word.includes(letter)) {
-        shots--;
-        badGuesses.push(letter);
+    shots--;
+    badGuesses.push(letter);
     }
-    guess = guess.split('').map((char, idx) => word.charAt(idx) === letter ? letter : char).join('');
+    guess = guess.split('').map(function(char, idx) {
+    return word.charAt(idx) === letter ? letter : char;
+    }).join('');
     render();
 }
 
@@ -60,8 +62,8 @@ function initialize() {
             guessArr[idx] = " ";
         }
     });
-    winPopup.classList.remove('popup');
-    losePopup.classList.remove('popup1');
+    winPopup.classList.remove('popup-drop');
+    losePopup.classList.remove('popup-drop');
     guess = guessArr.join("");
     allGuesses = [];
     badGuesses = [];
@@ -72,8 +74,8 @@ function render() {
     guessEl.textContent = guess;
     document.getElementById('showShots').innerHTML = `You have ${shots} Shots`;
     letterEls.forEach(function (td) {
-        td.style.opacity = allGuesses.includes(td.textContent) ? 0.5 : 1;
-        td.style.color = badGuesses.includes(td.textContent) ? 'red' : 'white';
+        td.style.opacity = allGuesses.includes(td.textContent) ? 0.7 : 1;
+        td.style.color = badGuesses.includes(td.textContent) ? 'orangered' : 'white';
     });
 
     for (var i = 1; i < 7; i++) {
@@ -82,11 +84,11 @@ function render() {
     }
 
     if (shots === 0) {
-        losePopup.classList.add('popup1');
+        losePopup.classList.add('popup-drop');
     } 
     
     if (guess === word) {
-        winPopup.classList.add('popup');
+        winPopup.classList.add('popup-drop');
     }
 }
 
